@@ -1,92 +1,73 @@
-# class SetMenu: # 클래스 정의
-#     def __init__(self): # 생성자
-#         self.sanghi = 4500 # 필드
-#         self.bigmac = 4200
+# a = 10 #할당
+# print(id(a))
+# a = 50 #재할당
+# print(id(a))
 
-#     def eat(self): # 메서드
-#         print('햄버거 주문하기')
-#         print(f'{self.sanghi + self.bigmac}원 입니다.')
+# #할당과 재할당에서 메모리 주소는 다르다.
 
-# mc = SetMenu()
-# mc.eat()
+# arr = [1,5,4,7]
+# a = arr[len(arr)-1]
+# a = arr[-1]
 
-# class Zergling:
-#     def __init__(self):
-#         self.hp = 20
-#         self.mana = 50
+# arr1 = [1,5,2,7,3,6]
+# print(arr1[0], arr1[-1])
+# print(arr1[::2])
+# print(arr1[3:])
 
-#     def run(self):
-#         print('뛴다')
-#         self.hp -= 1
-#         self.mana += 1
+# a, b = 1, 2
+# c, d = (1, 2)
 
-#     def show_stats(self):
-#         print(f'HP : {self.hp}')
-#         print(f'MANA : {self.mana}')
+# print(type(a))
+# print(type(d))
 
 
-# z1 = Zergling() # 인스턴스 생성
-# z2 = Zergling()
+# a = 1,2,3
+# a = 1,2,3
+# print(type(a))
+# print(a)
 
-# z1.run()
-# z1.show_stats()
+# my_dict_3 = {}
+# my_dict_3 = dict() # a = set()
 
-# for i in range(5):
-#     z2.run()
-# z2.show_stats()
+# my_dict_3['apple'] = 12
+# my_dict_3['list']= [1,2,3]
 
-# a = 3 # 3은 객체, a는 변수, 할당
-# b = [1, 4, 2, 5, 4] # []는 객체, b는 변수, 할당
-# c = SetMenu() #객체(SetMenu라는 인스턴스 하나), SetMenu()는 객체, c는 변수, 할당
-# a = 15 # 15는 객체, a는 변수, 재할당(할당)
-# b[3] = 2 # b[3]은 인덱싱 element(요소), 할당x, 2는 객체x(리스트 안에 값을 할당하는 것이므로 독립적인 개체는 아님)
-#                                                     할당의 개념에서 객체가 아닌 것..?
-# a = SetMenu() # SetMenu()는 객체, a는 변수, 재할당(할당)
-# # 변수의 개수 : 3개
-# # 객체의 개수 : 4개
-# # 할당 횟수 : 5번
+# print(my_dict_3)
 
-a = 3
-b = 3 # 객체는 하나..?
+# d = dict()
+# d['HI'] = [1,2,3,"KFC1"]
+# d['OH'] = [1,5,{"HO":14, "MY":119, "qq":'KFC2'}]
+# d[-153] = [(1,2,(5,6,"KFC3"))]
 
-class GameMachine:
-    def __init__(self): # 필수는 아니다..?
-        self.coin = 0
+# print(d['HI'][3])
+# print(d['OH'][2]['qq'])
+# print(d[-153][0][2][2])
 
-    def input_coin(self,coin_num):
-        # 코인은 5개까지만, 10 초과할 수 없음
-        if coin_num > 5:
-            return
-        
-        if self.coin + coin_num > 10:
-            return
-        
-        self.coin += coin_num
+# a = ''
+# b = None
 
-    def play_game(self):
-        if self.coin < 1:
-            print('코인을 넣어주세요')
-            return
-        
-        self.coin -= 1
-        print('게임 재밌다')
+# print(type(a))
+# print(type(b))
 
-    def show_status(self):
-        print(f'남아있는 코인은 {self.coin} 입니다.')
+# a = 10
+# b = 5
 
-gm = GameMachine()
-gm.input_coin(2)
-gm.show_status()
-gm.play_game()
-gm.show_status()
+# # print(a >= b) #항상 부등호 먼저
 
-class Student:
-    # 클래스 변수
-    total_students = 0
-    # 생성자 함수
-    def __init__(self, name, grade):
-        # 왼쪽 name : 인스턴스 변수, 오른쪽 name : parameter
-        self.name = name
-        self.grade = grade
-        Student.total_students += 1
-    
+# a = [1,2,3]  # 두 개는 다른 객체 > 메모리 주소가 다르기 때문에
+# b = [1,2,3]
+
+# print(id(a)) 
+# print(id(b))
+# #다른 객체이기 때문에 False
+# print(a is b)
+
+# b = a
+# print(id(a)) 
+# print(id(b))
+# #같은 객체이기 때문에 True
+# print(a is b)
+
+a = (1, )
+print(type(a))
+
